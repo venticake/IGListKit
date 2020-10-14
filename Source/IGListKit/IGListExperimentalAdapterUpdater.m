@@ -10,8 +10,13 @@
 #import <IGListDiffKit/IGListAssert.h>
 
 #import "IGListAdapterUpdaterHelpers.h"
+#if SWIFT_PACKAGE_CONSUMER
 #import "Internal/IGListIndexSetResultInternal.h"
 #import "Internal/IGListMoveIndexPathInternal.h"
+#else
+#import "IGListIndexSetResultInternal.h"
+#import "IGListMoveIndexPathInternal.h"
+#endif
 #import "IGListReloadIndexPath.h"
 #import "IGListTransitionData.h"
 #import "IGListUpdateTransactable.h"

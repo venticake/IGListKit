@@ -13,9 +13,14 @@
 #import <IGListKit/IGListAdapterUpdaterDelegate.h>
 
 #import "IGListAdapterUpdaterHelpers.h"
-#import "Internal/IGListIndexSetResultInternal.h"
 #import "IGListItemUpdatesCollector.h"
+#if SWIFT_PACKAGE_CONSUMER
+#import "Internal/IGListIndexSetResultInternal.h"
 #import "Internal/IGListMoveIndexPathInternal.h"
+#else
+#import "IGListIndexSetResultInternal.h"
+#import "IGListMoveIndexPathInternal.h"
+#endif
 #import "IGListReloadIndexPath.h"
 #import "IGListTransitionData.h"
 #import "UICollectionView+IGListBatchUpdateData.h"
