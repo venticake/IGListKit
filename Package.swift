@@ -50,6 +50,8 @@ let package = Package(
                 .headerSearchPath("../Internal"),
                 // Other private headers
                 .headerSearchPath("../IGListDiffKit/Internal"),
+                // TWEAK for private imports
+                .define("SWIFT_PACKAGE_CONSUMER", to: "1"),
             ]
         ),
         .target(
