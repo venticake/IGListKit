@@ -31,25 +31,24 @@ let package = Package(
         ),
         .target(
             name: "IGListKit",
+            dependencies: ["IGListDiffKit"],
             path: "Source/IGListKit",
             publicHeadersPath: ".",
             cSettings: [
                 .headerSearchPath("../"),
                 .headerSearchPath("../IGListDiffKit/Internal"),
-                .headerSearchPath("../IGListDiffKit/"),
                 .headerSearchPath("Internal"),
+                .headerSearchPath("../Internal"),
             ]
         ),
         .target(
             name: "IGListSwiftKit",
-            dependencies: ["IGListKit", "IGListDiffKit"],
+            dependencies: ["IGListKit"],
             path: "Source/IGListSwiftKit",
             cSettings: [
                 .headerSearchPath("../"),
                 .headerSearchPath("../IGListDiffKit/Internal"),
-                .headerSearchPath("../IGListDiffKit/"),
-                .headerSearchPath("Internal"),
-                .define("USE_SWIFT_PACKAGE_FROM_XCODE", to: "1"),
+                .headerSearchPath("../IGListKit/Internal"),
             ]
         ),
     ],
