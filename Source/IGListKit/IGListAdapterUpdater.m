@@ -12,8 +12,8 @@
 
 #import "IGListAdapterUpdaterHelpers.h"
 #import "IGListArrayUtilsInternal.h"
-#import "IGListIndexSetResultInternal.h"
-#import "IGListMoveIndexPathInternal.h"
+#import "Internal/IGListIndexSetResultInternal.h"
+#import "Internal/IGListMoveIndexPathInternal.h"
 #import "IGListReloadIndexPath.h"
 #import "UICollectionView+IGListBatchUpdateData.h"
 

@@ -24,6 +24,10 @@ let package = Package(
             path: "Source/IGListDiffKit",
             publicHeadersPath: ".",
             cSettings: [
+                // Xcode
+                .headerSearchPath("$SRCROOT/Source"),
+                .headerSearchPath("$SRCROOT/Source/IGListDiffKit/Internal"),
+                // Package
                 .headerSearchPath("../"),
                 .headerSearchPath("../Internal"),
                 .headerSearchPath("Internal")
@@ -35,10 +39,17 @@ let package = Package(
             path: "Source/IGListKit",
             publicHeadersPath: ".",
             cSettings: [
+                // Xcode
+                .headerSearchPath("$SRCROOT/Source"),
+                .headerSearchPath("$SRCROOT/Source/IGListDiffKit/Internal"),
+                .headerSearchPath("$SRCROOT/Source/IGListKit/Internal"),
+                // Package allows - <XXXX/xx.h> import
                 .headerSearchPath("../"),
-                .headerSearchPath("../IGListDiffKit/Internal"),
+                // Frameworks private headers with tweak for import.
                 .headerSearchPath("Internal"),
                 .headerSearchPath("../Internal"),
+                // Other private headers
+                .headerSearchPath("../IGListDiffKit/Internal"),
             ]
         ),
         .target(

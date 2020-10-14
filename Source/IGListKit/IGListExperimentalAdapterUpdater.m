@@ -10,8 +10,8 @@
 #import <IGListDiffKit/IGListAssert.h>
 
 #import "IGListAdapterUpdaterHelpers.h"
-#import "IGListIndexSetResultInternal.h"
-#import "IGListMoveIndexPathInternal.h"
+#import "Internal/IGListIndexSetResultInternal.h"
+#import "Internal/IGListMoveIndexPathInternal.h"
 #import "IGListReloadIndexPath.h"
 #import "IGListTransitionData.h"
 #import "IGListUpdateTransactable.h"
